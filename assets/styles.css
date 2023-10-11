@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: poppins;
+    background-color: whitesmoke;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    width: 60vw;
+    background-color: white;
+}
+
+.content-header {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-header img {
+    width: 16rem;
+    height: 20rem;
+    border-radius: 10%;
+}
+
+.work-experience-wrapper {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin: 10px 0;
+}
+
+.work-experience {
+    /* margin-left: 1rem; */
+    margin: 0px 6px;
+    font-weight: 500;
+    font-size: 0.85rem;
+}
+
+.content-header p {
+    width: 70%;
+    color: gray;
+}
+
+/* Add additional CSS styles for content, if needed */
+.content {
+    text-align: center;
+    padding: 50px;
+    color: #000000;
+    font-size: 24px;
+}
