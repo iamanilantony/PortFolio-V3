@@ -18,7 +18,10 @@ function getDurationBetweenDates(startDate) {
     timeDifference % millisecondsInMonth / millisecondsInWeek
   );
   const days = Math.floor(
-    timeDifference % millisecondsInWeek / (24 * 60 * 60 * 1000)
+    timeDifference %
+      millisecondsInMonth %
+      millisecondsInWeek /
+      (24 * 60 * 60 * 1000)
   );
 
   return `${years} ${years > 1 ? "years" : "year"} ${months} ${months > 1
