@@ -19,18 +19,6 @@ body {
     background-color: white;
 }
 
-.content-header {
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-}
-
-.content-header img {
-    width: 16rem;
-    height: 20rem;
-    border-radius: 10%;
-}
-
 .work-experience-wrapper {
     display: flex;
     /* justify-content: center; */
