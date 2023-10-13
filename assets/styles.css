@@ -46,6 +46,10 @@ body {
     color: gray;
 }
 
+/* img {
+    border-radius: 10%;
+} */
+
 /* Add additional CSS styles for content, if needed */
 .content {
     text-align: center;
