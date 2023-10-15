@@ -12,45 +12,33 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <link rel="icon" href="assets/profile.png" />
-    <!-- <link href="dist/output.css" rel="stylesheet"> -->
+    <link href="dist/output.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg-white">
     <div class="h-[100vh] flex justify-center items-center">
-        <div class="wrapper rounded-lg">
-            <input type="text" class="input-field">
-            <div class="border-2 m-8 rounded-lg p-4">
+        <div class="wrapper rounded-l">
+            <input type="text" class="input-field opacity-0">
+            <div class="m-8 rounded-lg md:p-4">
                 <div class="content-box m-4">
-                    <p class="typing-text w-full h-3/4 text-2xl leading-relaxed"></p>
+                    <p class="typing-text w-full h-3/4 text:sm md:text-2xl leading-relaxed"></p>
                 </div>
                 <hr>
                 <div class="content flex justify-around text-lg items-center">
                     <div class="flex">
-                        <p>Time Left: </p>
-                        &nbsp;
-                        <span class="time-left">60</span>
-                    </div>
-                    <span>|</span>
-                    <div class="flex">
-                        <p>Mistakes: </p>
-                        &nbsp;
-                        <span class="time-left">60</span>
-                    </div>
-                    <span>|</span>
-                    <div class="flex">
                         <p>WPM: </p>
                         &nbsp;
-                        <span class="time-left">60</span>
+                        <span class="time-left"></span>
                     </div>
-                    <span>|</span>
-                    <div class="flex">
-                        <p>CPM : </p>
-                        <span class="time-left">60</span>
-                    </div>
-                    <div class="flex">
+                    <!-- <div class="flex">
                         <buttton class="bg-green-700 text-white p-2 rounded-lg text-sm">Try Again</button>
-                    </div>
+                    </div> -->
                 </div>
+                <div class="flex justify-center">
+                    <p class="p-2 rounded-lg text-sm">Press <span class="border-2 p-1 rounded-lg">Esc</span> to
+                        restart</p>
+                </div>
+
             </div>
         </div>
     </div>
@@ -58,4 +46,3 @@
 
 <script src="assets/paragraphs.js"></script>
 <script src="assets/typer.js"></script>
-<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
