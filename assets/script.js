@@ -24,11 +24,13 @@ function getDurationBetweenDates(startDate) {
       (24 * 60 * 60 * 1000)
   );
 
-  return `${years} ${years > 1 ? "years" : "year"} ${months} ${months > 1
-    ? "months"
-    : "month"} ${weeks} ${weeks > 1 ? "weeks" : "week"} ${days} ${days > 1
-    ? "days"
-    : "day"}`;
+  return `${years} ${years > 1 ? "years" : "year"} ${months !== 0
+    ? months
+    : ""} ${months > 1 ? "months" : months === 0 ? "" : "month"} ${weeks !== 0
+    ? weeks
+    : ""} ${weeks > 1 ? "weeks" : weeks === 0 ? "" : "week"} ${days !== 0
+    ? days
+    : ""} ${days > 1 ? "days" : days === 0 ? "" : "day"}`;
 }
 
 const date = document.querySelector(".work-experience");
@@ -36,46 +38,3 @@ const date = document.querySelector(".work-experience");
 const result = getDurationBetweenDates("20 May 2022");
 
 date.innerHTML = result;
-
-// var themeToggleDarkIcon = document.getElementById("theme-toggle-dark-icon");
-// var themeToggleLightIcon = document.getElementById("theme-toggle-light-icon");
-
-// // Change the icons inside the button based on previous settings
-// if (
-//   localStorage.getItem("color-theme") === "dark" ||
-//   (!("color-theme" in localStorage) &&
-//     window.matchMedia("(prefers-color-scheme: dark)").matches)
-// ) {
-//   themeToggleLightIcon.classList.remove("hidden");
-// } else {
-//   themeToggleDarkIcon.classList.remove("hidden");
-// }
-
-// var themeToggleBtn = document.getElementById("theme-toggle");
-
-// themeToggleBtn.addEventListener("click", function() {
-//   // toggle icons inside button
-//   themeToggleDarkIcon.classList.toggle("hidden");
-//   themeToggleLightIcon.classList.toggle("hidden");
-
-//   // if set via local storage previously
-//   if (localStorage.getItem("color-theme")) {
-//     if (localStorage.getItem("color-theme") === "light") {
-//       document.documentElement.classList.add("dark");
-//       localStorage.setItem("color-theme", "dark");
-//     } else {
-//       document.documentElement.classList.remove("dark");
-//       localStorage.setItem("color-theme", "light");
-//     }
-
-//     // if NOT set via local storage previously
-//   } else {
-//     if (document.documentElement.classList.contains("dark")) {
-//       document.documentElement.classList.remove("dark");
-//       localStorage.setItem("color-theme", "light");
-//     } else {
-//       document.documentElement.classList.add("dark");
-//       localStorage.setItem("color-theme", "dark");
-//     }
-//   }
-// });
