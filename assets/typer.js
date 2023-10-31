@@ -34,12 +34,12 @@ const initTyping = () => {
     characters[index].classList.remove(
       "text-red-400",
       "bg-red-100",
-      "text-green-400"
+      "text-white"
     );
   } else {
     characterCount++;
     if (currentChar === characters[index].innerText) {
-      characters[index].classList.add("text-green-400");
+      characters[index].classList.add("text-white");
     } else {
       mistakes++;
       characters[index].classList.add("text-red-400", "bg-red-100");
