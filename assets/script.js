@@ -1,3 +1,26 @@
+function getDurationBetweenDatesShort(startDate) {
+  const start = new Date(new Date(startDate).setHours(0, 0, 0, 0));
+  const end = new Date();
+
+  const timeDifference = end - start;
+
+  // Calculate the number of milliseconds in a year and month
+  const millisecondsInYear = 365 * 24 * 60 * 60 * 1000;
+  const millisecondsInMonth = 365 / 12 * 24 * 60 * 60 * 1000;
+
+  // Calculate the duration in years and months
+  const years = Math.floor(timeDifference / millisecondsInYear);
+  const months = Math.floor(
+    timeDifference % millisecondsInYear / millisecondsInMonth
+  );
+
+  return `${years !== 0 ? years : ""} ${years === 0
+    ? ""
+    : years > 1 ? "years" : "year"} ${months !== 0
+    ? `${months} ${months > 1 ? "months" : "month"}`
+    : ""}`;
+}
+
 function getDurationBetweenDates(startDate) {
   const start = new Date(new Date(startDate).setHours(0, 0, 0, 0));
   const end = new Date();
@@ -34,7 +57,12 @@ function getDurationBetweenDates(startDate) {
 }
 
 const date = document.querySelector(".work-experience");
-
+const dateSettlin = document.querySelector(".work-experience-settlin");
+const dateMULearn = document.querySelector(".work-experience-mulearn");
 const result = getDurationBetweenDates("20 May 2022");
+const resultSettlin = getDurationBetweenDatesShort("20 May 2022");
+const resultMuLearn = getDurationBetweenDatesShort("02 November 2023");
 
 date.innerHTML = result;
+dateSettlin.innerHTML = resultSettlin;
+dateMULearn.innerHTML = resultMuLearn;
